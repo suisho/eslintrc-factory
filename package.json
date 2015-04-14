@@ -4,9 +4,29 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "browserify src/index.jsx > www/lib/index.js",
+    "watch": "watchify src/index.jsx -v -o www/lib/index.js",
+    "start": "static www",
+    "gulp": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "browserify": {
+    "transform": [
+      "babelify",
+      "reactify"
+    ]
   },
   "keywords": [],
   "author": "suisho",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^5.1.8",
+    "babelify": "^6.0.2",
+    "browserify": "^9.0.8",
+    "gulp": "^3.8.11",
+    "reactify": "^1.1.0"
+  },
+  "dependencies": {
+    "react": "^0.13.1"
+  }
 }

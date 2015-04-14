@@ -1,5 +1,5 @@
 // copy from espree
-module.exports = {
+export default {
   // enable parsing of arrow functions
   arrowFunctions: true,
 
