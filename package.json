@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "browserify src/index.jsx > www/lib/index.js",
-    "watch": "watchify src/index.jsx -v -o www/lib/index.js",
+    "watch": "watchify src/index.jsx -d -v -o www/lib/index.js",
     "start": "static www",
     "gulp": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -23,8 +23,10 @@
     "babel": "^5.1.8",
     "babelify": "^6.0.2",
     "browserify": "^9.0.8",
+    "garnish": "^2.1.3",
     "gulp": "^3.8.11",
-    "reactify": "^1.1.0"
+    "reactify": "^1.1.0",
+    "wzrd": "^1.2.1"
   },
   "dependencies": {
     "react": "^0.13.1"

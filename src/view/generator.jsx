@@ -1,7 +1,16 @@
 var React = require("react")
 
-export class EslintFactory extends React.Component{
+export default class EslintFactiory extends React.Component{
   render(){
-    return <div></div>
+    return <ResultArea></ResultArea>
+  }
+}
+export class ResultArea extends React.Component{
+  render(){
+    return (
+      <div>
+        <textarea></textarea>
+      </div>
+    )
   }
 }
