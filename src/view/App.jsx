@@ -20,7 +20,7 @@ export class ResultArea extends React.Component{
   }
 }
 
-export class CheckBoxes extends React.Componeent{
+export class CheckBoxes extends React.Component{
   render(){
     const { data } = this.props
     const checkboxElm = data.map((item) => {
