@@ -1,0 +1,36 @@
+env:
+  node: true
+  browser: true
+  mocha: true
+rules:
+  semi: 0
+  no-unused-vars: 1
+  strict: false
+  no-multi-spaces: 0
+  new-cap: 0
+  quotes: 0
+  no-underscore-dangle: 0
+ecmaFeatures:
+  arrowFunctions: true
+  binaryLiterals: true
+  blockBindings: true
+  classes: true
+  destructuring: true
+  defaultParams: true
+  forOf: true
+  generators: true
+  modules: true
+  objectLiteralComputedProperties: true
+  objectLiteralDuplicateProperties: true
+  objectLiteralShorthandMethods: true
+  objectLiteralShorthandProperties: true
+  octalLiterals: true
+  regexUFlag: true
+  regexYFlag: true
+  superInFunctions: true
+  templateStrings: true
+  unicodeCodePointEscapes: true
+  globalReturn: true
+  jsx: true
+plugins:
+  - react

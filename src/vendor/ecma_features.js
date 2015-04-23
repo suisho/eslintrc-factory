@@ -1,4 +1,5 @@
 // copy from espree
+// https://github.com/eslint/espree
 export default {
   // enable parsing of arrow functions
   arrowFunctions: true,

@@ -1,5 +1,9 @@
-var React = require("react")
-var EslintFactory = require("./view/generator.jsx")
+import React from "react"
+import App from "./view/App.jsx"
 
-React.render(<div />, document.querySelector("#container"))
+var container = document.querySelector("#container")
+React.render(
+  <App />,
+  container
+)
 
