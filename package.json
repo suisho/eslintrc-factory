@@ -6,7 +6,7 @@
   "repository": "https://github.com/suisho/eslintrc-factory.git",
   "scripts": {
     "build": "browserify src/index.jsx > lib/index.js",
-    "start": "budo src/index.jsx -v --live | garnish",
+    "start": "budo src/index.jsx -v -d --live | garnish",
     "test": "mocha --compilers js:babel/register"
   },
   "browserify": {
@@ -33,6 +33,7 @@
     "stylify": "^1.2.0"
   },
   "dependencies": {
+    "flummox": "^4.0.0-alpha",
     "immutable": "^3.7.2",
     "react": "^0.13.2"
   }

@@ -1,6 +1,6 @@
 // copy from espree
 // https://github.com/eslint/espree
-export default {
+const ecmaFeatures = {
   // enable parsing of arrow functions
   arrowFunctions: true,
 
@@ -67,3 +67,4 @@ export default {
   // enable return in global scope
   globalReturn: true
 }
+export default Object.keys(ecmaFeatures)
