@@ -1,23 +1,29 @@
 import { Store } from 'flummox'
-import ecmaFeatures from "../vendor/ecma_features.js"
-
+import ecmaFeaturValues from "../vendor/ecma_features.js"
+import { Map } from 'immutable'
 export default class extends Store{
   constructor(flux){
     super()
     const action = flux.getActions('setting')
     this.register(action.setEcmaFeatures, this.updateEcma)
     this.state = {
-      settings: {
-        ecmaFeatures: {}
-      }
+      ecmaFeatures: Map()
     }
   }
+  buildRc(){
+    var settings = {} //this.state.settings
+    settings.ecmaFeatures = this.state.ecmaFeatures.filter((feature) => {
+      return feature === true
+    }).toObject()
+    return settings
+  }
   getAllEcmaFeatures(){
-    return ecmaFeatures
+    return ecmaFeaturValues
   }
   updateEcma({name, value}){
-    var setting = this.state.settings
-    setting.ecmaFeatures[name] = value
-    this.setState(setting)
+    const ecmaFeatures = this.state.ecmaFeatures
+    this.setState({
+      ecmaFeatures: ecmaFeatures.set(name, value)
+    })
   }
 }
