@@ -1,7 +1,7 @@
 import React from "react"
 import CheckBoxes from "./CheckBoxes.jsx"
 
-export default class extends React.Component{
+export default class SettingArea extends React.Component{
   constructor(){
     super()
     this.change = this.change.bind(this)

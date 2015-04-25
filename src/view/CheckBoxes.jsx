@@ -16,7 +16,8 @@ export class ListCheckItem extends React.Component{
     )
   }
 }
-export default class extends React.Component{
+
+export default class CheckBoxes extends React.Component{
   constructor(){
     super()
     this.change = this.change.bind(this)
@@ -27,23 +28,9 @@ export default class extends React.Component{
       value: e.target.checked
     })
   }
-  generateLiElm(item){
-    return (
-      <label key={item.label}>
-        <li>
-          <input type="checkbox"
-            onChange={this.change}
-            checked={item.checked}
-            name={item.name}
-            value={item.value} />
-          {item.label}
-        </li>
-      </label>
-    )
-  }
   render(){
     const { data } = this.props
-    const checkboxElm = data.map((item) => {
+    const checkboxElm = data.toArray().map((item) => {
       return <ListCheckItem key={item.name} item={item} onChange={this.change} />
     })
     return (
@@ -53,4 +40,3 @@ export default class extends React.Component{
     )
   }
 }
-

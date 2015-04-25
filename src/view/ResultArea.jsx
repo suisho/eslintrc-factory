@@ -1,7 +1,7 @@
 import React from "react"
 import yaml from 'js-yaml'
 
-export default class extends React.Component{
+export default class ResultArea extends React.Component{
   constructor(){
     super()
     this.state = {renderMode: "yaml"}
