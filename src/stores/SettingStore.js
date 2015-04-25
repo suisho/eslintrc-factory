@@ -1,7 +1,7 @@
 import { Store } from 'flummox'
 import features from "espree/lib/features"
 import eslintDefault from 'eslint/conf/eslint.json'
-import { Map } from 'immutable'
+import { OrderedMap } from 'immutable'
 
 export default class extends Store{
   constructor(flux){
@@ -14,7 +14,7 @@ export default class extends Store{
   }
   buildInitialEcmaFeatures(){
     var ecmaFeatures = Object.keys(features)
-    return Map(ecmaFeatures.map((f) => {
+    return OrderedMap(ecmaFeatures.map((f) => {
       return [f, true]
     }))
   }
