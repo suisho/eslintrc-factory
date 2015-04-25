@@ -4,6 +4,9 @@ import SettingStore from "./stores/SettingStore"
 const SettingAction = {
   setEcmaFeatures(content){
     return content
+  },
+  setEcmaFeaturesAll(content){
+    return content
   }
 }
 

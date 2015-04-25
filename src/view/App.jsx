@@ -16,7 +16,6 @@ export default class App extends React.Component{
           })
         }
       }>
-        <h1>.eslintrc Generator</h1>
         <SettingArea />
         <ResultArea />
       </FluxComponent>
