@@ -33,8 +33,11 @@
     "stylify": "^1.2.0"
   },
   "dependencies": {
+    "eslint": "^0.20.0",
+    "espree": "^2.0.1",
     "flummox": "^4.0.0-alpha",
     "immutable": "^3.7.2",
+    "js-yaml": "^3.2.7",
     "react": "^0.13.2"
   }
 }

@@ -1,24 +1,31 @@
 import { Store } from 'flummox'
-import ecmaFeaturValues from "../vendor/ecma_features.js"
+import features from "espree/lib/features"
+import eslintDefault from 'eslint/conf/eslint.json'
 import { Map } from 'immutable'
+
 export default class extends Store{
   constructor(flux){
     super()
     const action = flux.getActions('setting')
     this.register(action.setEcmaFeatures, this.updateEcma)
     this.state = {
-      ecmaFeatures: Map()
+      ecmaFeatures: this.buildInitialEcmaFeatures()
     }
   }
+  buildInitialEcmaFeatures(){
+    var ecmaFeatures = Object.keys(features)
+    return Map(ecmaFeatures.map((f) => {
+      return [f, true]
+    }))
+  }
   buildRc(){
-    var settings = {} //this.state.settings
+    var settings = {}
+    // ecmaFeatures
     settings.ecmaFeatures = this.state.ecmaFeatures.filter((feature) => {
       return feature === true
     }).toObject()
+
     return settings
-  }
-  getAllEcmaFeatures(){
-    return ecmaFeaturValues
   }
   updateEcma({name, value}){
     const ecmaFeatures = this.state.ecmaFeatures
