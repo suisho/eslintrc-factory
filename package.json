@@ -12,7 +12,7 @@
   "browserify": {
     "transform": [
       "babelify",
-      "stylify",
+      "stylify"
     ]
   },
   "keywords": [],
