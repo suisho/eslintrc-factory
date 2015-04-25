@@ -2,6 +2,8 @@ import React from "react"
 import FluxComponent from "flummox/component"
 import Flux from '../flux'
 import CheckBoxes from "./CheckBoxes.jsx"
+import ResultArea from "./ResultArea.jsx"
+
 export default class extends React.Component{
   render(){
     const flux = new Flux()
@@ -19,20 +21,6 @@ export default class extends React.Component{
         <Settings />
         <ResultArea/>
       </FluxComponent>
-    )
-  }
-}
-export class ResultArea extends React.Component{
-  render(){
-    const {rc} = this.props
-    return (
-      <div className="result-area">
-        <pre>
-          <code>
-            {JSON.stringify(rc, null, "  ")}
-          </code>
-        </pre>
-      </div>
     )
   }
 }
